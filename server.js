@@ -1,10 +1,10 @@
 const express = require('express')
 const { join } = require('path')
-const db = require('./config/connection')
+const db = require('./server/config/connection')
 const { ApolloServer } = require('apollo-server-express')
 
-const { typeDefs, resolvers } = require('./schemas')
-const { authMiddleware } = require('./utils/auth.js')
+const { typeDefs, resolvers } = require('./server/schemas')
+const { authMiddleware } = require('./server/utils/auth.js')
 
 const app = express()
 const PORT = process.env.PORT || 3001
